@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="As a business user" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-17T22:04:14" hostname="vi-la3bphtd6" time="17.249">
+  <properties/>
+  <testcase name="Verify that user is able to perform add and verification of the products into wish list and cart successfully" classname="As a business user" time="17.249"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 2533
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Mar 17, 2022 10:04:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

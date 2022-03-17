@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.24")
+        classpath("net.serenity-bdd:serenity-single-page-report:2.4.24")
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+serenity {
+    reports = ["single-page-html"]
+}
+
+dependencies {
+
+    testImplementation 'net.serenity-bdd:serenity-cucumber6:2.6.0'
+    testImplementation 'net.serenity-bdd:serenity-screenplay:2.6.0'
+    testImplementation 'net.serenity-bdd:serenity-screenplay-rest:2.6.0'
+    testImplementation 'junit:junit:4.13.1'
+}
+
+test {
+    testLogging.showStandardStreams = true
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
